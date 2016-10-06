@@ -20,25 +20,25 @@
       $stateProvider
         .state('home',{
           url: '/home',
-          templateUrl: 'states/home.html',
+          templateUrl: 'app/states/home.html',
           controller: 'homeController',
           controllerAs: 'homeCtrl'
         })
         .state('login', {
           url: '/login',
-          templateUrl: 'states/login.html',
+          templateUrl: 'app/states/login.html',
           controller: 'loginController',
           controllerAs: 'loginCtrl'
         })
         .state('signup', {
           url: '/signup',
-          templateUrl: 'states/signup.html',
+          templateUrl: 'app/states/signup.html',
           controller: 'loginController',
           controllerAs: 'loginCtrl'
         })
         .state('map', {
            url: '/:mapId',
-           templateUrl: 'states/map.html',
+           templateUrl: 'app/states/map.html',
            controller: 'mapController',
            controllerAs: 'mapCtrl'
         });

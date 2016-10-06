@@ -1,0 +1,21 @@
+.no-padding {
+  padding: 0px;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.flex--home {
+  display: flex;
+  justify-content: center;
+}
+
+.homepage--background {
+  background-image: url('../img/homepage-background.jpg');
+  height: 85vh;
+}
+
+.homepage--title {
+  color: #fff;
+}
