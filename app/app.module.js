@@ -24,16 +24,23 @@
           controller: 'homeController',
           controllerAs: 'homeCtrl'
         })
+        .state('login', {
+          url: '/login',
+          templateUrl: 'states/login.html',
+          controller: 'loginController',
+          controllerAs: 'loginCtrl'
+        })
+        .state('signup', {
+          url: '/signup',
+          templateUrl: 'states/signup.html',
+          controller: 'loginController',
+          controllerAs: 'loginCtrl'
+        })
         .state('map', {
            url: '/:mapId',
            templateUrl: 'states/map.html',
            controller: 'mapController',
            controllerAs: 'mapCtrl'
-          //  resolve: {
-          //    movie: function (allMovies, $stateParams) {
-          //     return _.find(allMovies, {id: parseInt($stateParams.movieId, 10)});
-          //    }
-          // }
         });
     }
 }());

@@ -4,23 +4,22 @@ let express = require('express'),
     bodyParser = require('body-parser');
 
 let routes = require('./routes/index'),
-    users = require('./routes/users'),
     login = require('./routes/login'),
-    homePage = require('./routes/homePage'),
-    createUser = require('./routes/users'),
-    database = require('./db/db.js');
+    database = require('../db/db.js');
 
 let app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/users', database);
 app.use('/login', login);
-app.use('/homepage', homePage);
-app.use('/signup', createUser);
-app.use('/db', database);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
